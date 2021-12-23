@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project 168</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <script src="https://raw.githack.com/whitehatjr/ar-gesture-handler/main/index.js"></script>
+
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; trakingMethod: best"
+        vr-mode-ui="enabled: false;">
+
+        <a-assets>
+            <a-asset-item id="curcit" src="./models/curcit.glb"></a-asset-item>
+            <a-asset-item id="bulb" src="./models/bulb/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset="hiro">
+            <a-entity id="layout" gltf-model="./models/curcit.glb" position="-0.27395 5.35815 -5.24608"
+                rotation="36.693936073563314 -13.208396051150869 -7.9835939173528905" scale="10 10 10"></a-entity>
+
+            <a-entity id="light" position="1.48816 3.52237 -4.59197" rotation="27.79762038856702 0 0"
+                scale="0.15 0.15 0.15" gltf-model="./models/bulb/scene.gltf"></a-entity>
+        </a-marker>
+
+    </a-scene>
+
+</body>
+
+</html>
